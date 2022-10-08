@@ -24,7 +24,7 @@ public class Player {
 				moveDecks(hand1, discard);
 			} else if ((hand1.getDeckSize() > 0 && hand2.getDeckSize() > 0) && (card1.getRank() < card2.getRank())) {
 				moveDecks(hand2, discard);
-			} else {
+			} else { //War
 				for (int i = 0; i < 3; i++) {
 					card1 = discard.takeCard(hand1.dealCard());
 					card2 = discard.takeCard(hand2.dealCard());
@@ -33,7 +33,7 @@ public class Player {
 			
 		}
 		
-		
+		//Results
 		if (hand1.getDeckSize() == 0) {
 			System.out.println("Hand 2 wins!");
 		} else {
